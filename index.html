@@ -1,45 +1,88 @@
 <!doctype html>
-<html lang="ru">
+<html id="html" lang="ru">
 <head>
   <meta charset="utf-8" />
+
   <title></title>
  <style type="text/css">
- 	html, body {
-  width: 100%;
-  
-  background: #ccc;
-  padding: 0;
-  margin: 0;
-  margin-top:7.3% ;
-  margin-bottom: 20%;
-  background: url(navi.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-position-y:-24px;
+ html, body {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20%;
+    margin-top: 118px;
+    background: url(navi4.jpg);
+    background-attachment: fixed;
+    /* background-position: center 456px; */
+    background-position: center 541px;
 }
+
+
 #text1{
+	font-size: 2em;
 	font-family: Inter,Helvetica Neue,Helvetica,sans-serif;
 
 	 background-color: black;
   position: relative;
 
-  width: 500px;
+  width: 60%;
   background-color:#323232;
   color: white;
   padding: 3%;
 
-  font-size: larger;
+ 
   margin: 0 auto;
-}.divt{
+}
+.divt{
 display: block;
 margin: 0 auto;
 width: 100%;
-padding:0 0px 20px   ;
+padding:0 0px 20px;
+}
+@media (min-width: 1301px) and (max-width: 2487px){
+	html, body {
+    background-position: center -316px;
+    margin-top: 120px;
+}
+}
+
+  
+ @media (min-width: 2488px) and (max-width: 2900px){
+ 	html, body {
+    background-position: center 942px;
+    margin-top: 239px;
+    background-size: 138em;
+}
+ }
 
 
 }
-  
-  
+
+@media (min-width: 768px) and (max-width: 1199px){
+	html, body {
+    background-position: center 448px;
+    margin-top: 101px;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
 }
 
  </style>
@@ -158,10 +201,56 @@ padding:0 0px 20px   ;
  set_height()
 
 */
+/**let x = screen.width
+var c = document.getElementById('body')
+var b = document.getElementById('html')
+c.style.background_attachment="fixed"
+c.style.background_position_x="526 px"
+b.style.background_attachment="fixed"
+b.style.background_position_x="526 px"
+if (x<=568){		
+
+c.style.background = 'url(navi2.jpg)';
+c.style.background_position="right  bottom "
+b.style.background = 'url(navi2.jpg)';
+b.style.background_position="right  bottom "
+
+}else{
+
+	
+	c.style.background = 'url(navi.jpg)';
+	c.style.background_position="center 0"
+	b.style.background = 'url(navi.jpg)';
+	b.style.background_position="center 0"
+	console.log(c.style.background_position)
+
+
+}**/
+
+		
+function adaptive () {
+	
+
+var x = screen.width
+if (x>=768){
+	let f= document.getElementById('text1')
+f.style.width="60%"
+f.style.fontSize='1em'
+}
+else if (x<=375){
+let f = document.getElementById('text1')
+f.style.width="80%"
+}else if (x<=320){
+	let f = document.getElementById('text1')
+f.style.width="90%"
+}
+}
 
 
 
 
+setInterval(adaptive, 1000)
  </script>
+
 </body>
 </html>
