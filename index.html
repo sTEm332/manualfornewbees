@@ -12,7 +12,7 @@
    <style type="text/css">
      #main_div{
    width: 70%;
-    margin: 178px auto;
+    margin: 5% auto;
     background-color: #323232;
     color: white;
     padding: 1% 5%;
@@ -40,7 +40,10 @@ padding: 5px 20px;
     margin: 0 3%;
 }
   
-
+@media (min-width: 320px) and (max-width: 769px) {
+#main_div{
+	width: 90%;}
+ }
    </style>
   
   </head>
@@ -293,58 +296,25 @@ if (num ==1 )
   }
     
 function adaptive () {
-console.log("|||||||||||||||||")
+console.log("|_______________|")
   //console.log("hui")
 
-  var x = window.screen.Width
-  if (x>=1440){
-    console.log("1440")
-     document.getElementById('unpic').style.fontSize="90%"
-    }
-    else if (x<=1024)
-    {
+  /*var x = window.screen.Width
+  console.log(x)
+  if (x==1024){
+  	document.getElementById("main_div").style.Width="90%"
+  	 }
 
-      console.log("1024")
-      let f= document.getElementById('text1')
-    f.style.width="70%"
-    var unpic = document.getElementById('unpic').style.fontSize="50%"
-      
-    //console.log(f.style.width +"sad")
-    f.style.fontSize='1em'
-    }
-    else if (x<=768)
-      {
-        alert("sas")
-        console.log("768")
-        btns.style.padding="13px 56px"
-        btns.style.fontSize="32px"
-        btns.style.marginLeft="10%"
 
-        let f= document.getElementById('text1')
-      f.style.width="80%"
-      //console.log(f.style.width +"sad")
-      f.style.fontSize='1em'
-      }
-    else if (x<=375)
-      {
-        ById('text1')
-      f.style.width="80%"
-      }
-    else if (x<=320)
-      {
-        console.log("lo0west")
-        
+
+
         //margin-left: 10%;
         //font-size: 32px;
         //adding: 13px 56px;
-        let f = document.getElementById('text1')
-      f.style.width="90%"
-      }else{
-        console.log('no!!')
-        console.log(x)
-      }
+     
 }
 //adaptive()
+*/
 
     </script>
   </body>
