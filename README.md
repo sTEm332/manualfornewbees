@@ -1,2 +1,2 @@
-# navimanual
+#manual
 qq
